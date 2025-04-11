@@ -14,5 +14,7 @@ if (isset($_GET['q'])){
 		case 'posts':	 echo Model::posts($_GET['threadId']);	break;
 		case 'newpost':	 echo Model::newPost($_GET['threadId'],$_GET['text']);	break;
 		case 'verify':	 echo Model::verifyPassword($_GET['name'],$_GET['password']);	break;
+		case 'addthread':	 echo Model::addThread($_GET['name']);	break;
+		case 'removethread':	 echo Model::removeThread($_GET['id']);	break;
 	}	
 }

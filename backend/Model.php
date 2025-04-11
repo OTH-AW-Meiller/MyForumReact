@@ -33,6 +33,21 @@ final class Model  {
         }
     }
 
+    public static function addThread(string $name) {
+        $name = trim($name);
+        if (!empty($name)) {
+            self::insert(into: 'threads', values: [$name]);
+            $pre = self::prefix();
+            return json_encode(self::query("select id from {$pre}threads where max(id)"));
+        }
+    }
+    public static function removeThread(int $id) {
+        if (is_numeric($id) && $id > 0) {
+            self::delete(from: 'threads', where: 'id', value: $id);
+            //self::delete(from: 'posts', where: 'thread_ID', value: $id);
+        }
+    }
+
     public static function verifyPassword(string $name, string $password) {
         $name = trim($name);
         $password = trim($password);
