@@ -46,7 +46,7 @@ Um eine React-Anwendung mit einem PHP-Backend zu erstellen, kannst du folgenden 
 
 4. **Starte den PHP-Server**
 
-   Starte einen PHP-Entwicklungsserver im Backend-Ordner:
+   Starte einen PHP-Entwicklungsserver im Projekt-Root-Ordner:
 
 - Konfiguriere MAMP oder XAMPP entsprechend,
 um einen lokalen Server auf `http://localhost:80` zu starten.
